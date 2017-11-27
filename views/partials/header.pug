@@ -1,0 +1,35 @@
+.navbar-wrapper
+  .container-fluid
+    .navbar.navbar-fixed-top
+      .container
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded="false", aria-controls="navbar")
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+          a.navbar-brand.fa.fa-cube#headerText(href='/') Alexander Bankier
+        .collapse.navbar-collapse#navbar
+          ul.nav.navbar-nav
+            li(class=(title === 'Contact') ? 'active' : undefined)
+              a#headerText(href='/contact') Contact Me
+            li.dropdown
+              a.dropdown-toggle#headerText(data-toggle="dropdown", role="button", aria-haspopup="true", aria-expanded="false") More About Me
+                  span(class='caret')
+                  ul.dropdown-menu
+                    li
+                      a#headerText(href='/resume') My Resume
+                    li.divider
+            
+            //- //- Turn on for status monitor
+            //- li
+            //-   a#headerText(href='/status') Status
+
+          ul.nav.navbar-nav.navbar-right     
+            li.dropdown
+              a.dropdown-toggle#headerText(data-toggle="dropdown", aria-haspopup="true", role="button", aria-expanded="false") Other Interesting Things
+                span(class='caret')
+                  ul.dropdown-menu
+                    li
+                      a#headerText(href='#') Add stuff here
+                          
