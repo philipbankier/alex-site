@@ -12,6 +12,7 @@ var router = express.Router();
  * Primary route
  */
 router.route('/').get(pagesController.home);
+router.route('/blog').get(pagesController.blog);
 router.route('/contact').get(contactController.getContact);
 router.route('/contact').post(contactController.postContact);
 router.route('/resume').get(pagesController.resume);

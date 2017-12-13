@@ -1,0 +1,284 @@
+extends ../layout
+
+block content
+  header#header.header
+    //- header-start
+    .container
+      figure.logo.animated.fadeInDown.delay-07s
+        a(href='#')
+          img(src='images/facePic.jpg' alt='')
+      h1.animated.fadeInDown.delay-07s Hello I'm Alexander Bankier
+      ul.we-create.animated.fadeInUp.delay-1s
+        li Add description here
+      a.link.animated.fadeInUp.delay-1s.servicelink(href='#service') My Experience
+  //- header-end
+  nav#test.main-nav-outer
+    //- main-nav-start
+    .container
+      ul.main-nav
+        li
+          a(href='#header') Home
+        li
+          a(href='/resume') My Resume
+        li
+          a(href='/blog') My Blog
+        li.small-logo
+          a(href='#header')
+            img(src='images/small-logo.png' alt='')
+        li
+          a(href='#client') Clients
+        li
+          a(href='#team') Team
+        li
+          a(href='#contact') Contact
+      a.res-nav_click(href='#')
+        i.fa-bars
+  //- main-nav-end
+ 
+
+  //- Page Content
+  br
+  br
+  .container
+    .row
+      //- Blog Entries Column
+      .col-md-8
+        h1.my-4.text-center
+          | Alex Bankier's Blog
+        br
+        //- Blog Post
+        .card.mb-4
+          img.card-img-top(src='http://placehold.it/750x300', alt='Card image cap')
+          .card-body
+            h2.card-title Post Title
+            p.card-text
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!
+            a.btn.btn-primary(href='#') Read More →
+          .card-footer.text-muted
+            | Posted on January 1, 2017 by
+            a(href='#') Start Bootstrap
+        //- Blog Post
+        br
+        br
+        .card.mb-4
+          img.card-img-top(src='http://placehold.it/750x300', alt='Card image cap')
+          .card-body
+            h2.card-title Post Title
+            p.card-text
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!
+            a.btn.btn-primary(href='#') Read More →
+          .card-footer.text-muted
+            | Posted on January 1, 2017 by
+            a(href='#') Start Bootstrap
+        //- Blog Post
+        br
+        br
+        .card.mb-4
+          img.card-img-top(src='http://placehold.it/750x300', alt='Card image cap')
+          .card-body
+            h2.card-title Post Title
+            p.card-text
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!
+            a.btn.btn-primary(href='#') Read More →
+          .card-footer.text-muted
+            | Posted on January 1, 2017 by
+            a(href='#') Start Bootstrap
+        //- Pagination
+        ul.pagination.justify-content-center.mb-4
+          li.page-item
+            a.page-link(href='#') ← Older
+          li.page-item.disabled
+            a.page-link(href='#') Newer →
+      //- Sidebar Widgets Column
+      .col-md-4
+        //- Search Widget
+        .card.my-4
+          h5.card-header Search
+          .card-body
+            .input-group
+              input.form-control(type='text', placeholder='Search for...')
+              span.input-group-btn
+                button.btn.btn-secondary(type='button') Go!
+        //- Categories Widget
+        .card.my-4
+          h5.card-header Categories
+          .card-body
+            .row
+              .col-lg-6
+                ul.list-unstyled.mb-0
+                  li
+                    a(href='#') Web Design
+                  li
+                    a(href='#') HTML
+                  li
+                    a(href='#') Freebies
+              .col-lg-6
+                ul.list-unstyled.mb-0
+                  li
+                    a(href='#') JavaScript
+                  li
+                    a(href='#') CSS
+                  li
+                    a(href='#') Tutorials
+        //- Side Widget
+        .card.my-4
+          h5.card-header Side Widget
+          .card-body
+            | You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+
+
+  .container.bot
+    section#contact.main-section.contact
+      .row
+        .col-lg-6.col-sm-7.wow.fadeInLeft
+          .contact-info-box.address.clearfix
+            h3
+              i.icon-map-marker
+              | Location:
+            span
+              | Los Angeles 
+          .contact-info-box.phone.clearfix
+            h3
+              i.fa-phone
+              | Phone:
+            span 1-800-BOO-YAHH
+          .contact-info-box.email.clearfix
+            h3
+              i.fa-pencil
+              | email:
+            span alex@bankier.com
+          .contact-info-box.hours.clearfix
+            h3
+              i.fa-clock-o
+              | Hours:
+            span
+              strong Monday - Thursday:
+              |  10am - 6pm
+              br
+              strong Friday:
+              |  People work on Fridays now?
+              br
+              strong Saturday - Sunday:
+              |  Best not to ask.
+          ul.social-link
+            li.twitter
+              a(href='#')
+                i.fa-twitter
+            li.facebook
+              a(href='#')
+                i.fa-facebook
+            li.pinterest
+              a(href='#')
+                i.fa-pinterest
+            li.gplus
+              a(href='#')
+                i.fa-google-plus
+            li.dribbble
+              a(href='#')
+                i.fa-dribbble
+        .col-lg-6.col-sm-5.wow.fadeInUp.delay-05s
+          .form
+            #sendmessage Your message has been sent. Thank you!
+            #errormessage
+            form.contactForm(action='' method='post' role='form')
+              .form-group
+                input#name.form-control.input-text(type='text' name='name' placeholder='Your Name' data-rule='minlen:4' data-msg='Please enter at least 4 chars')
+                .validation
+              .form-group
+                input#email.form-control.input-text(type='email' name='email' placeholder='Your Email' data-rule='email' data-msg='Please enter a valid email')
+                .validation
+              .form-group
+                input#subject.form-control.input-text(type='text' name='subject' placeholder='Subject' data-rule='minlen:4' data-msg='Please enter at least 8 chars of subject')
+                .validation
+              .form-group
+                textarea.form-control.input-text.text-area(name='message' rows='5' data-rule='required' data-msg='Please write something for us' placeholder='Message')
+                .validation
+              .text-center
+                button.input-btn(type='submit') Send Message
+  footer.footer
+    .container
+      .footer-logo
+        a(href='#')
+          img(src='images/footer-logo.png' alt='')
+      span.copyright &copy; Knight Theme. All Rights Reserved
+      .credits
+        //-
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Knight
+        a(href='https://bootstrapmade.com/bootstrap-agency-templates/') Bootstrap Agency Templates
+        |  by 
+        a(href='https://bootstrapmade.com/') BootstrapMade
+
+  script(type='text/javascript').
+    $(document).ready(function(e) {
+      $('#test').scrollToFixed();
+      $('.res-nav_click').click(function() {
+        $('.main-nav').slideToggle();
+      return false
+      });
+    });
+
+  script.
+    wow = new WOW({
+      animateClass: 'animated',
+      offset: 100
+    });
+    wow.init();
+
+  script(type='text/javascript').
+    $(window).load(function() {
+      $('.main-nav li a, .servicelink').bind('click', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+          scrollTop: $($anchor.attr('href')).offset().top - 102
+        }, 1500, 'easeInOutExpo');
+        /*
+        if you don't want to use the easing effects:
+        $('html, body').stop().animate({
+        scrollTop: $($anchor.attr('href')).offset().top
+        }, 1000);
+        */
+        if ($(window).width() < 768) {
+          $('.main-nav').hide();
+        }
+        event.preventDefault();
+      });
+    })
+
+  script(type='text/javascript').
+    $(window).load(function() {
+      var $container = $('.portfolioContainer'),
+      $body = $('body'),
+      colW = 375,
+      columns = null;
+      $container.isotope({
+        // disable window resizing
+        resizable: true,
+        masonry: {
+          columnWidth: colW
+        }
+      });
+
+      $(window).smartresize(function() {
+        // check if columns has changed
+        var currentColumns = Math.floor(($body.width() - 30) / colW);
+        if (currentColumns !== columns) {
+          // set new column count
+          columns = currentColumns;
+          // apply width to container manually, then trigger relayout
+          $container.width(columns * colW)
+          .isotope('reLayout');
+        }
+      }).smartresize(); // trigger resize to set container width
+      $('.portfolioFilter a').click(function() {
+        $('.portfolioFilter .current').removeClass('current');
+        $(this).addClass('current');
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+          filter: selector,
+        });
+        return false;
+      });
+    });

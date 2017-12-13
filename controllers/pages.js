@@ -19,3 +19,13 @@ exports.resume = (req, res) => {
     title: 'Resume'
   });
 };
+
+/**
+ * GET /
+ * Blog page.
+ */
+exports.blog = (req, res) => {
+  res.render('myThings/blog', {
+    title: 'Blog'
+  });
+};
