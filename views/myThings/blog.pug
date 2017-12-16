@@ -49,7 +49,7 @@ block content
             h2.card-title Post Title
             p.card-text
               | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!
-            a.btn.btn-primary(href='#') Read More →
+            a.btn.btn-primary(href='/post') Read More →
           .card-footer.text-muted
             | Posted on January 1, 2017 by
             a(href='#') Start Bootstrap
@@ -62,7 +62,7 @@ block content
             h2.card-title Post Title
             p.card-text
               | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!
-            a.btn.btn-primary(href='#') Read More →
+            a.btn.btn-primary(href='/post') Read More →
           .card-footer.text-muted
             | Posted on January 1, 2017 by
             a(href='#') Start Bootstrap
@@ -75,7 +75,7 @@ block content
             h2.card-title Post Title
             p.card-text
               | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!
-            a.btn.btn-primary(href='#') Read More →
+            a.btn.btn-primary(href='/post') Read More →
           .card-footer.text-muted
             | Posted on January 1, 2017 by
             a(href='#') Start Bootstrap
@@ -122,90 +122,83 @@ block content
           .card-body
             | You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
 
-
-  .container.bot
-    section#contact.main-section.contact
-      .row
-        .col-lg-6.col-sm-7.wow.fadeInLeft
-          .contact-info-box.address.clearfix
-            h3
-              i.icon-map-marker
-              | Location:
-            span
-              | Los Angeles 
-          .contact-info-box.phone.clearfix
-            h3
-              i.fa-phone
-              | Phone:
-            span 1-800-BOO-YAHH
-          .contact-info-box.email.clearfix
-            h3
-              i.fa-pencil
-              | email:
-            span alex@bankier.com
-          .contact-info-box.hours.clearfix
-            h3
-              i.fa-clock-o
-              | Hours:
-            span
-              strong Monday - Thursday:
-              |  10am - 6pm
-              br
-              strong Friday:
-              |  People work on Fridays now?
-              br
-              strong Saturday - Sunday:
-              |  Best not to ask.
-          ul.social-link
-            li.twitter
-              a(href='#')
-                i.fa-twitter
-            li.facebook
-              a(href='#')
-                i.fa-facebook
-            li.pinterest
-              a(href='#')
-                i.fa-pinterest
-            li.gplus
-              a(href='#')
-                i.fa-google-plus
-            li.dribbble
-              a(href='#')
-                i.fa-dribbble
-        .col-lg-6.col-sm-5.wow.fadeInUp.delay-05s
-          .form
-            #sendmessage Your message has been sent. Thank you!
-            #errormessage
-            form.contactForm(action='' method='post' role='form')
-              .form-group
-                input#name.form-control.input-text(type='text' name='name' placeholder='Your Name' data-rule='minlen:4' data-msg='Please enter at least 4 chars')
-                .validation
-              .form-group
-                input#email.form-control.input-text(type='email' name='email' placeholder='Your Email' data-rule='email' data-msg='Please enter a valid email')
-                .validation
-              .form-group
-                input#subject.form-control.input-text(type='text' name='subject' placeholder='Subject' data-rule='minlen:4' data-msg='Please enter at least 8 chars of subject')
-                .validation
-              .form-group
-                textarea.form-control.input-text.text-area(name='message' rows='5' data-rule='required' data-msg='Please write something for us' placeholder='Message')
-                .validation
-              .text-center
-                button.input-btn(type='submit') Send Message
+  section.main-section.alabaster
+    .container.bot
+      section#contact.main-section.contact
+        .row
+          .col-lg-6.col-sm-7.wow.fadeInLeft
+            .contact-info-box.address.clearfix
+              h3
+                i.icon-map-marker
+                | Location:
+              span
+                | Los Angeles 
+            .contact-info-box.phone.clearfix
+              h3
+                i.fa-phone
+                | Phone:
+              span 1-800-BOO-YAHH
+            .contact-info-box.email.clearfix
+              h3
+                i.fa-pencil
+                | email:
+              span alex@bankier.com
+            .contact-info-box.hours.clearfix
+              h3
+                i.fa-clock-o
+                | Hours:
+              span
+                strong Monday - Thursday:
+                |  10am - 6pm
+                br
+                strong Friday:
+                |  People work on Fridays now?
+                br
+                strong Saturday - Sunday:
+                |  Best not to ask.
+            ul.social-link
+              li.twitter
+                a(href='#')
+                  i.fa-twitter
+              li.facebook
+                a(href='#')
+                  i.fa-facebook
+              li.pinterest
+                a(href='#')
+                  i.fa-pinterest
+              li.gplus
+                a(href='#')
+                  i.fa-google-plus
+              li.dribbble
+                a(href='#')
+                  i.fa-dribbble
+          .col-lg-6.col-sm-5.wow.fadeInUp.delay-05s
+            .form
+              #sendmessage Your message has been sent. Thank you!
+              #errormessage
+              form.contactForm(action='' method='post' role='form')
+                .form-group
+                  input#name.form-control.input-text(type='text' name='name' placeholder='Your Name' data-rule='minlen:4' data-msg='Please enter at least 4 chars')
+                  .validation
+                .form-group
+                  input#email.form-control.input-text(type='email' name='email' placeholder='Your Email' data-rule='email' data-msg='Please enter a valid email')
+                  .validation
+                .form-group
+                  input#subject.form-control.input-text(type='text' name='subject' placeholder='Subject' data-rule='minlen:4' data-msg='Please enter at least 8 chars of subject')
+                  .validation
+                .form-group
+                  textarea.form-control.input-text.text-area(name='message' rows='5' data-rule='required' data-msg='Please write something for us' placeholder='Message')
+                  .validation
+                .text-center
+                  button.input-btn(type='submit') Send Message
   footer.footer
     .container
       .footer-logo
         a(href='#')
           img(src='images/footer-logo.png' alt='')
-      span.copyright &copy; Knight Theme. All Rights Reserved
+      span.copyright &copy; PB Industries 2017
       .credits
-        //-
-          All the links in the footer should remain intact.
-          You can delete the links only if you purchased the pro version.
-          Licensing information: https://bootstrapmade.com/license/
-          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Knight
-        a(href='https://bootstrapmade.com/bootstrap-agency-templates/') Bootstrap Agency Templates
-        |  by 
-        a(href='https://bootstrapmade.com/') BootstrapMade
+        a(href='https://github.com/philipbankier') Website By Philip Bankier
 
   script(type='text/javascript').
     $(document).ready(function(e) {

@@ -29,3 +29,13 @@ exports.blog = (req, res) => {
     title: 'Blog'
   });
 };
+
+/**
+ * GET /
+ * Post page.
+ */
+exports.post = (req, res) => {
+  res.render('myThings/post', {
+    title: 'Post'
+  });
+};

@@ -13,6 +13,7 @@ var router = express.Router();
  */
 router.route('/').get(pagesController.home);
 router.route('/blog').get(pagesController.blog);
+router.route('/post').get(pagesController.post);
 router.route('/contact').get(contactController.getContact);
 router.route('/contact').post(contactController.postContact);
 router.route('/resume').get(pagesController.resume);
